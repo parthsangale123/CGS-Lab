@@ -1,0 +1,28 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+interface IInteractable
+{
+    public void Interact();
+}
+public class Interactor : MonoBehaviour
+{
+    [SerializeField] Transform InteractorSource;
+    [SerializeField] float InteractRange = 5f;
+
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return; // only trigger once when pressed
+
+        Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
+
+        if (Physics.Raycast(r, out RaycastHit hitInfo, InteractRange))
+        {
+            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
+            {
+                interactObj.Interact();
+            }
+        }
+    }
+}
