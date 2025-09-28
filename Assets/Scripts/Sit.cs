@@ -20,6 +20,11 @@ public class Sit : MonoBehaviour, IInteractable
         }
     }
 
+    public string GetPrompt()
+    {
+        return isSitting ? "Press E to stand" : "Press E to sit";
+    }
+    
     private void SitDown()
     {
         Debug.Log("Sitting on seat...");

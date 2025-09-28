@@ -1,14 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 interface IInteractable
 {
     public void Interact();
 }
+
 public class Interactor : MonoBehaviour
 {
+
     [SerializeField] Transform InteractorSource;
     [SerializeField] float InteractRange = 5f;
+    [SerializeField] TextMeshProUGUI promptText;
 
 
     public void OnInteract(InputAction.CallbackContext context)
