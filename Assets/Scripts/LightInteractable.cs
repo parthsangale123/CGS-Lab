@@ -3,7 +3,7 @@ using UnityEngine;
 public class LightInteractable : MonoBehaviour, IInteractable
 {
 
-    [SerializeField] private Light[] lights; // Lights to control
+    [SerializeField] private Light[] lights; // Lights to control by the switch
     private bool isOn = false;
 
     public void Interact()
@@ -20,5 +20,4 @@ public class LightInteractable : MonoBehaviour, IInteractable
 
         Debug.Log(isOn ? "Lights turned ON" : "Lights turned OFF");
     }
-    
 }

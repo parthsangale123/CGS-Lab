@@ -17,7 +17,7 @@ public class Interactor : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (!context.performed) return; // only trigger once when pressed
+        if (!context.performed) return;
 
         Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
 
