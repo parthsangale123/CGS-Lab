@@ -3,7 +3,7 @@ using UnityEngine;
 public class DoorInteraction : MonoBehaviour, IInteractable
 {
 
-   private Animator animator;
+    private Animator animator;
     private bool isOpen = false;
 
     private void Awake()
@@ -13,13 +13,7 @@ public class DoorInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (isOpen)
-        {
-            animator.SetBool("isOpen", false);
-        }
-        else
-        {
-            animator.SetBool("isOpen", true);
-        }
+        isOpen = !isOpen; // toggle state for door
+        animator.SetBool("isOpen", isOpen);
     }
 }
