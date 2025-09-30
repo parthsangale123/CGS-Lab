@@ -3,12 +3,12 @@ using UnityEngine.Video;
 
 public class TVInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private VideoPlayer videoPlayer; // VideoPlayer component
-    [SerializeField] private Renderer tvScreenRenderer; // TV screen mesh renderer
-    [SerializeField] private Material blackMaterial; // Black material to show when TV is off
+    [SerializeField] private VideoPlayer videoPlayer;// VideoPlayer component
+    [SerializeField] private Renderer tvScreenRenderer;// TV screen mesh renderer
+    [SerializeField] private Material blackMaterial;// Black material to show when TV is off
 
     private bool isPlaying = false;
-    private Material originalMaterial; // stores the original video material
+    private Material originalMaterial;// stores the original video material
 
     private void Start()
     {
@@ -26,12 +26,12 @@ public class TVInteractable : MonoBehaviour, IInteractable
         Debug.Log("TV Interacted!");
         if (isPlaying)
         {
-            videoPlayer.Pause(); // pause the video
+            videoPlayer.Pause();// pause the video
         }
         else
         {
             videoPlayer.Play();
-            tvScreenRenderer.material = originalMaterial; // show video
+            tvScreenRenderer.material = originalMaterial;// show video
         }
 
         isPlaying = !isPlaying;
@@ -40,6 +40,6 @@ public class TVInteractable : MonoBehaviour, IInteractable
     private void OnVideoEnd(VideoPlayer vp)
     {
         isPlaying = false;
-        tvScreenRenderer.material = blackMaterial; // show black after video ends
+        tvScreenRenderer.material = blackMaterial;// show black after video ends
     }
 }
