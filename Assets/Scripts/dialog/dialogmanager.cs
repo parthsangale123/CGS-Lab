@@ -5,6 +5,8 @@ using System.Collections;
 using TMPro;
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private GameObject crosshair;
+
     // --- UI Elements ---
     public TextMeshProUGUI npcSentenceText;
     public Button option1Button;
@@ -34,7 +36,12 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueNode startingNode)
     {
-        istalking=true;
+        // Enable cursor for UI interaction
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        crosshair.SetActive(false);
+
+        istalking =true;
         dialoguePanel.SetActive(true);
         currentNode = startingNode;
         DisplayNode(currentNode);
@@ -94,7 +101,12 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         Debug.Log("Dialogue ended.");
-        istalking=false;
+        istalking = false;
+
+        // Back to FPS control
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        crosshair.SetActive(true);
         
     }
     

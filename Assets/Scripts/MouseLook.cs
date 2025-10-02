@@ -35,7 +35,7 @@ public class MouseLook : MonoBehaviour
 
     private void Update()
     {
-        if(GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
+        if (GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
         float mouseX = lookInput.x * sensitivity * Time.deltaTime;
         float mouseY = lookInput.y * sensitivity * Time.deltaTime;
 
