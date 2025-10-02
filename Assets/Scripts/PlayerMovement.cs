@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
         MovePlayer();
         ApplyGravityAndJump();
     }

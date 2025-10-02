@@ -1,11 +1,12 @@
 // DialogueTrigger.cs
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour, IInteractable
 {
     // This is where you'll build your conversation tree in the Inspector
     public DialogueNode startingNode;
     private DialogueManager dialogueManager;
+   
 
     void Start()
     {
@@ -19,5 +20,13 @@ public class DialogueTrigger : MonoBehaviour
         dialogueManager.StartDialogue(startingNode);
     }
 
-    
+    public void Interact()
+    {
+        Debug.Log("yes");
+          TriggerDialogue();
+        
+       
+        
+    }
+
 }

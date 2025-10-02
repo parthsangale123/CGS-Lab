@@ -11,16 +11,16 @@ public class DialogueManager : MonoBehaviour
     public Button option2Button;
     public Button endButton; // <<< NEW: Add a reference for the End button
     public GameObject dialoguePanel; 
-
+    public bool istalking=false;
     // --- Private variables ---
     private DialogueNode currentNode;
-    private Text option1ButtonText;
-    private Text option2ButtonText;
+    private TextMeshProUGUI option1ButtonText;
+    private TextMeshProUGUI option2ButtonText;
 
     void Awake()
     {
-        option1ButtonText = option1Button.GetComponentInChildren<Text>();
-        option2ButtonText = option2Button.GetComponentInChildren<Text>();
+        option1ButtonText = option1Button.GetComponentInChildren<TextMeshProUGUI>();
+        option2ButtonText = option2Button.GetComponentInChildren<TextMeshProUGUI>();
         
         // --- NEW: Set up the end button ---
         // Make sure the end button calls the EndDialogue method when clicked.
@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueNode startingNode)
     {
+        istalking=true;
         dialoguePanel.SetActive(true);
         currentNode = startingNode;
         DisplayNode(currentNode);
@@ -93,6 +94,8 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         Debug.Log("Dialogue ended.");
+        istalking=false;
+        
     }
     
     IEnumerator TypeSentence(string sentence)
