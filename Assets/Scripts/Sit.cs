@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Sit : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Transform seatPoint; // where the player will sit
+    [SerializeField] private Transform seatPoint;// where the player will sit
     private bool isSitting = false;
     private GameObject player;
     private PlayerMovement movement;
@@ -18,11 +18,6 @@ public class Sit : MonoBehaviour, IInteractable
         {
             StandUp();
         }
-    }
-
-    public string GetPrompt()
-    {
-        return isSitting ? "Press E to stand" : "Press E to sit";
     }
     
     private void SitDown()

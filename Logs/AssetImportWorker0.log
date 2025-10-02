@@ -1,30 +1,30 @@
 Using pre-set license
 Built from '6000.0/respin/6000.0.51f1-a206c6c19c75' branch; Version is '6000.0.51f1 (01c3ff5872c5) revision 115711'; Using compiler version '193933523'; Build Type 'Release'
-OS: 'Windows 11  (10.0.22631) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 7932 MB
+OS: 'Windows 11  (10.0.26100) 64bit CoreSingleLanguage' Language: 'en' Physical Memory: 7521 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-10-02T10:48:06Z
+Date: 2025-09-30T13:34:49Z
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\6000.0.51f1-x86_64\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\6000.0.51f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/CGS-Lab
+C:/Game Dev/CGS-Lab
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52688
+49888
 -job-worker-count
-3
+5
 -background-job-worker-count
 8
 -gc-helper-count
 1
-Successfully changed project path to: D:/CGS-Lab
-D:/CGS-Lab
+Successfully changed project path to: C:/Game Dev/CGS-Lab
+C:/Game Dev/CGS-Lab
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -60,13 +60,13 @@ D:/CGS-Lab
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10424]  Target information:
+Player connection [17476]  Target information:
 
-Player connection [10424]  * "[IP] 10.196.195.232 [Port] 0 [Flags] 2 [Guid] 1746493326 [EditorId] 1746493326 [Version] 1048832 [Id] WindowsEditor(7,Parth) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [17476]  * "[IP] 192.168.1.40 [Port] 0 [Flags] 2 [Guid] 1744335880 [EditorId] 1744335880 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-30SJCHUU) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [10424] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [10424] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 3
+Player connection [17476] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [17476] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
@@ -77,59 +77,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.51f1 (01c3ff5872c5)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.51f1-x86_64/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/CGS-Lab/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.51f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Game Dev/CGS-Lab/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce MX350 (ID=0x1c94)
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f9d)
     Vendor:   NVIDIA
-    VRAM:     1964 MB
+    VRAM:     3937 MB
     Driver:   32.0.15.7703
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.51f1-x86_64/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.51f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.51f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56936
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.51f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.51f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.51f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56016
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.51f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006662 seconds.
-- Loaded All Assemblies, in  1.073 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.51f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004725 seconds.
+- Loaded All Assemblies, in  0.492 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.452 seconds
-Domain Reload Profiling: 2525ms
-	BeginReloadAssembly (436ms)
+- Finished resetting the current domain, in  0.349 seconds
+Domain Reload Profiling: 840ms
+	BeginReloadAssembly (194ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (4ms)
-	RebuildCommonClasses (114ms)
-	RebuildNativeTypeToScriptingClass (26ms)
-	initialDomainReloadingComplete (102ms)
-	LoadAllAssembliesAndSetupDomain (391ms)
-		LoadAssemblies (423ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (172ms)
+		LoadAssemblies (189ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (384ms)
-			TypeCache.Refresh (379ms)
-				TypeCache.ScanAssembly (330ms)
-			BuildScriptInfoCaches (2ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (1457ms)
+		AnalyzeDomain (168ms)
+			TypeCache.Refresh (167ms)
+				TypeCache.ScanAssembly (144ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (350ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1302ms)
+		SetupLoadedEditorAssemblies (299ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (102ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (217ms)
-			ProcessInitializeOnLoadAttributes (657ms)
-			ProcessInitializeOnLoadMethodAttributes (313ms)
+			InitializePlatformSupportModulesInManaged (21ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -141,11 +141,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.023 seconds
+- Loaded All Assemblies, in  1.015 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 3.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.87 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -153,172 +153,911 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.925 seconds
-Domain Reload Profiling: 5938ms
-	BeginReloadAssembly (496ms)
+- Finished resetting the current domain, in  0.887 seconds
+Domain Reload Profiling: 1893ms
+	BeginReloadAssembly (228ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (19ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (80ms)
-	RebuildCommonClasses (149ms)
-	RebuildNativeTypeToScriptingClass (53ms)
-	initialDomainReloadingComplete (137ms)
-	LoadAllAssembliesAndSetupDomain (2175ms)
-		LoadAssemblies (1547ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (660ms)
+		LoadAssemblies (528ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (910ms)
-			TypeCache.Refresh (639ms)
-				TypeCache.ScanAssembly (593ms)
-			BuildScriptInfoCaches (212ms)
-			ResolveRequiredComponents (48ms)
-	FinalizeReload (2928ms)
+		AnalyzeDomain (266ms)
+			TypeCache.Refresh (199ms)
+				TypeCache.ScanAssembly (181ms)
+			BuildScriptInfoCaches (48ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (887ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2087ms)
+		SetupLoadedEditorAssemblies (614ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (386ms)
-			ProcessInitializeOnLoadAttributes (1490ms)
-			ProcessInitializeOnLoadMethodAttributes (164ms)
-			AfterProcessingInitializeOnLoad (23ms)
-			EditorAssembliesLoaded (1ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (425ms)
+			ProcessInitializeOnLoadMethodAttributes (57ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (33ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 2.60 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 2.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 214 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6499 unused Assets / (4.3 MB). Loaded Objects now: 7201.
-Memory consumption went from 161.5 MB to 157.2 MB.
-Total: 44.954600 ms (FindLiveObjects: 3.379200 ms CreateObjectMapping: 2.015800 ms MarkObjects: 29.748100 ms  DeleteObjects: 9.803600 ms)
+Unloading 6458 unused Assets / (4.5 MB). Loaded Objects now: 7162.
+Memory consumption went from 165.3 MB to 160.9 MB.
+Total: 26.191700 ms (FindLiveObjects: 2.203100 ms CreateObjectMapping: 2.738400 ms MarkObjects: 14.399500 ms  DeleteObjects: 6.846100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7994.203671 seconds.
-  path: Assets/Materials/Suzanna.mat
-  artifactKey: Guid(f3cc91d599860cf49b5f675f10ca1804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Suzanna.mat using Guid(f3cc91d599860cf49b5f675f10ca1804) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'db7660b2bdef077abd81289550012790') in 2.5702567 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+  Time since last request: 473.027160 seconds.
+  path: Assets/HQ Laptop/Laptop_black_off.prefab
+  artifactKey: Guid(1e96745f2b6e038469341687cbb28188) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Laptop_black_off.prefab using Guid(1e96745f2b6e038469341687cbb28188) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4c4c5d1b5504c32ab0b7ea32e6af987') in 0.8524719 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
 
 ========================================================================
 Received Import Request.
-  Time since last request: 90.477809 seconds.
-  path: Assets/characters/Suzanne(rusty metalic).blend
-  artifactKey: Guid(8332045c7c598f341ae197c42ae2321c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/Suzanne(rusty metalic).blend using Guid(8332045c7c598f341ae197c42ae2321c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a42286f55992dac07c03fbcd6dc7c7e') in 0.1119517 seconds
+  Time since last request: 0.000056 seconds.
+  path: Assets/HQ Laptop/Laptop_white_off.prefab
+  artifactKey: Guid(71d7c0c979d468641afeec46db205a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Laptop_white_off.prefab using Guid(71d7c0c979d468641afeec46db205a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ebfc0b29b29366a876a919b5d9d59524') in 0.0679451 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/HQ Laptop/Mesh/Laptop.FBX
+  artifactKey: Guid(f2678f35f5f886a4bb86ab5152116294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Mesh/Laptop.FBX using Guid(f2678f35f5f886a4bb86ab5152116294) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0e7c96d3e0c0953f2fd442dcfb00f292') in 0.1109438 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
 
 ========================================================================
 Received Import Request.
-  Time since last request: 40.573839 seconds.
-  path: Assets/characters/CGS_Game.blend
-  artifactKey: Guid(72a4789b938495143b3feeadb65be699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/CGS_Game.blend using Guid(72a4789b938495143b3feeadb65be699) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'da58d628d63c6b7d17ff640699b7b9d9') in 1.2157168 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 945
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.948966 seconds.
-  path: Assets/characters/New Material.mat
-  artifactKey: Guid(0ecaebbd37c3c224e86d50898c5b0548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/New Material.mat using Guid(0ecaebbd37c3c224e86d50898c5b0548) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '311fac87816bdb399535e37ce2adb9cf') in 0.0101034 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.580963 seconds.
-  path: Assets/characters/textures
-  artifactKey: Guid(56a71b151cfc1854596fd4b4c600fa8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/textures using Guid(56a71b151cfc1854596fd4b4c600fa8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fae828f3f757f588b1cc61f68900b55b') in 0.0020749 seconds
+  Time since last request: 1.863120 seconds.
+  path: Assets/HQ Laptop/Mesh/Materials
+  artifactKey: Guid(ecde050ad0a7d26478e96d2dbf96d94b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Mesh/Materials using Guid(ecde050ad0a7d26478e96d2dbf96d94b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e0349abf0dac2b080053c68a40f75ca') in 0.001044 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.119807 seconds.
-  path: Assets/characters/textures/diffuse.png
-  artifactKey: Guid(a9f6e18ccafb32a41be7e7a7ee174dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/textures/diffuse.png using Guid(a9f6e18ccafb32a41be7e7a7ee174dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f7de638f895abf5c3c1ff00e6e3706a4') in 0.0211515 seconds
+  Time since last request: 0.079160 seconds.
+  path: Assets/HQ Laptop/Mesh/Materials/Laptop_dark.mat
+  artifactKey: Guid(f10ad687f04139a4b873242e429166a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Mesh/Materials/Laptop_dark.mat using Guid(f10ad687f04139a4b873242e429166a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fabd5d281c469730c6720fc25db2b0fd') in 0.1042362 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/HQ Laptop/Mesh/Materials/Laptop_white_off.mat
+  artifactKey: Guid(6cd28e4f8bb73734d940ef363ae9dcf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Mesh/Materials/Laptop_white_off.mat using Guid(6cd28e4f8bb73734d940ef363ae9dcf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f92bfd64792f45ca48e15f588862a3eb') in 0.0700713 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.341431 seconds.
+  path: Assets/HQ Laptop/Laptop_black.prefab
+  artifactKey: Guid(35e7ce7e1bb8eeb4f8e896fdfa8176db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Laptop_black.prefab using Guid(35e7ce7e1bb8eeb4f8e896fdfa8176db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7a6e24e2de82c0d86fc5398ae82fceeb') in 6.9698801 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/HQ Laptop/Laptop_white.prefab
+  artifactKey: Guid(fec0b93bb0c53f443bf3177dd2a03d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Laptop_white.prefab using Guid(fec0b93bb0c53f443bf3177dd2a03d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '825cc9e6c79f44688c1a7dd7e6c93469') in 0.0914136 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.691626 seconds.
+  path: Assets/Scripts/DoorInteraction.cs
+  artifactKey: Guid(0653be719fa6a99419708959e0657744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/DoorInteraction.cs using Guid(0653be719fa6a99419708959e0657744) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3b66b5b596140f1c81a21ba7db9d08c6') in 0.0011717 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.954068 seconds.
+  path: Assets/HQ Laptop/Textures/diffuse_d.tga
+  artifactKey: Guid(94d8d5732cdfa2b40a5431f6e55df43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Textures/diffuse_d.tga using Guid(94d8d5732cdfa2b40a5431f6e55df43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '891f10b3749186a3cbcc12585778cc70') in 0.1756433 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.157363 seconds.
-  path: Assets/characters/textures/gesgeheh.png
-  artifactKey: Guid(4d0c497b93c3ba24da5b65a593f80680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/textures/gesgeheh.png using Guid(4d0c497b93c3ba24da5b65a593f80680) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1965afab0fd6ed4f974f82bec7fa76bc') in 0.0084345 seconds
+  Time since last request: 0.000072 seconds.
+  path: Assets/HQ Laptop/Textures/normal.tga
+  artifactKey: Guid(72a44c93823b9bc45949ffaf9ef3b0f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Textures/normal.tga using Guid(72a44c93823b9bc45949ffaf9ef3b0f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '38535dbe08a2a0cb63f270930a79ab04') in 0.0685933 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/characters/textures/Texture.001.png
-  artifactKey: Guid(761a8715768e805499db980be285615f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/textures/Texture.001.png using Guid(761a8715768e805499db980be285615f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '850b81f25e862b28588be95bc4bfe287') in 0.0091195 seconds
+  Time since last request: 15.458194 seconds.
+  path: Assets/HQ Laptop/Textures
+  artifactKey: Guid(b67379c3ed5ca944ba50c7c5e9ed6860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Textures using Guid(b67379c3ed5ca944ba50c7c5e9ed6860) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6dc43e44be411c318638699bfb72c74c') in 0.0018279 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.014969 seconds.
+  path: Assets/HQ Laptop/Mesh/Laptop.FBX
+  artifactKey: Guid(f2678f35f5f886a4bb86ab5152116294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HQ Laptop/Mesh/Laptop.FBX using Guid(f2678f35f5f886a4bb86ab5152116294) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '452f3f786f811645e837992eaa1625e0') in 0.21604 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 80.918308 seconds.
+  path: Assets/LX Laptop
+  artifactKey: Guid(ea81d1783dcb5a5468e0154c46ef7b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop using Guid(ea81d1783dcb5a5468e0154c46ef7b8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '74dd4ade69fff8a325f3d5ac6910f8de') in 0.0009157 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.210681 seconds.
+  path: Assets/LX Laptop/Asset
+  artifactKey: Guid(da05323658c791d4298f476dec72cf9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset using Guid(da05323658c791d4298f476dec72cf9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47db79ee8ea493a7f225962ddbdba54d') in 0.0018237 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.347847 seconds.
+  path: Assets/LX Laptop/Asset/Models
+  artifactKey: Guid(b5ba411e536b1924f9ec1e5ff2952afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models using Guid(b5ba411e536b1924f9ec1e5ff2952afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '594a3def69f99950d956f72db730b6be') in 0.0018235 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.581354 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors
+  artifactKey: Guid(2a6daaeaa7eb6284bafd378c9fbc4630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors using Guid(2a6daaeaa7eb6284bafd378c9fbc4630) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a178e443ba4448544dd06d594cbd754') in 0.0006316 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.087972 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/LX Laptop.fbx
+  artifactKey: Guid(9430aaae28b74a9448f21cb0bb2b8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/LX Laptop.fbx using Guid(9430aaae28b74a9448f21cb0bb2b8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d120253adae903391050609221a3e29') in 0.1946704 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.122220 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/LX Laptop.fbx
+  artifactKey: Guid(9430aaae28b74a9448f21cb0bb2b8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/LX Laptop.fbx using Guid(9430aaae28b74a9448f21cb0bb2b8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '41db9f53efe6a42c52b57b7b94d5af5c') in 0.0759937 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.985073 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Materials
+  artifactKey: Guid(ac750c7cb6463b641941d2e852e7cdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Materials using Guid(ac750c7cb6463b641941d2e852e7cdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00f00b1df2fbdc693beddc268f952be3') in 0.0007882 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.278493 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight
+  artifactKey: Guid(46dd1af6b47c16d4b881006ff5c2a0b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight using Guid(46dd1af6b47c16d4b881006ff5c2a0b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15f0a9c88913601bc9edeb730a36812b') in 0.0006853 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088149 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/LX Laptop.fbx
+  artifactKey: Guid(ded8399a3ed7dbe449ee9359bb1ffae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/LX Laptop.fbx using Guid(ded8399a3ed7dbe449ee9359bb1ffae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '596a8469871ed0f2f1fe8046ea0ca744') in 2.2895584 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 44
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Power Button.mat
+  artifactKey: Guid(1eee89e87c818ab42b97319220925bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Power Button.mat using Guid(1eee89e87c818ab42b97319220925bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b2af7cbc99c748d286da0428fe0bfc01') in 0.0429406 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Main Color.mat
+  artifactKey: Guid(69882f868f9446a4f9364c61a910729d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Main Color.mat using Guid(69882f868f9446a4f9364c61a910729d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6cb56536d12fb26f7f4485a61f77053b') in 0.0097618 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop DVD Darker Metal.mat
+  artifactKey: Guid(4c77342a1bebcd24285cc7da8afc8478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop DVD Darker Metal.mat using Guid(4c77342a1bebcd24285cc7da8afc8478) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4365b7117a319687a8056ff569db60f') in 0.0113869 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Keyboard Deck.mat
+  artifactKey: Guid(f656062c73fe0e4499e544b50b24d093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Keyboard Deck.mat using Guid(f656062c73fe0e4499e544b50b24d093) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '445299868c0bb62186932797a53d6d23') in 0.0096874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Hinges.mat
+  artifactKey: Guid(73617e169261a984287e99165004a45b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Hinges.mat using Guid(73617e169261a984287e99165004a45b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '33f060d6fe57e3b4eafc2b2ffd0a860a') in 0.0087046 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Display.mat
+  artifactKey: Guid(e971ae85a8e6af340bcc28a6f866874e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Display.mat using Guid(e971ae85a8e6af340bcc28a6f866874e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '236b055376b24ea45f34ecc3458cef74') in 0.0097729 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/Webcam.png
+  artifactKey: Guid(ec2712794699c3846b0f76122242d306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/Webcam.png using Guid(ec2712794699c3846b0f76122242d306) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09452e0ff3c06d4a31bae592b30f0f1d') in 0.0104825 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/Logo Place Holder.png
+  artifactKey: Guid(ccbc61bc102c82f43837192f6fde6e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/Logo Place Holder.png using Guid(ccbc61bc102c82f43837192f6fde6e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ca29813415633da63644f06b0ef7afbe') in 0.0068811 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Bezel.mat
+  artifactKey: Guid(b9e34790cd6a6c7459dbddb4a78234b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Bezel.mat using Guid(b9e34790cd6a6c7459dbddb4a78234b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f1a87f504994e8ce972ad4188941e04') in 0.0083607 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Logo.mat
+  artifactKey: Guid(0a88752957343b44fa0452f76c379a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Logo.mat using Guid(0a88752957343b44fa0452f76c379a76) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd4c0fd7c3b33dd95172c8ab48b1ea4b4') in 0.0109659 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Matte Black.mat
+  artifactKey: Guid(5b34004a610964943a7f5d940e39e984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Matte Black.mat using Guid(5b34004a610964943a7f5d940e39e984) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '73b3a05f9b0d823bab085c35a38e6580') in 0.0113697 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Keyboard.mat
+  artifactKey: Guid(da6317e24086fd24b8fc594a396fc298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Keyboard.mat using Guid(da6317e24086fd24b8fc594a396fc298) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a88e32da05c33f06985d13bd677948f0') in 0.0127036 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Keyboard Backlight_Side.mat
+  artifactKey: Guid(2a1991e3c8990384396131e6a82f2658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop Keyboard Backlight_Side.mat using Guid(2a1991e3c8990384396131e6a82f2658) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6e1b16fc1b3d4a9b1ca512a66e2dd955') in 0.0114518 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop DVD Metal.mat
+  artifactKey: Guid(b33866f3865b7b342a7ef1e2a276fd40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop DVD Metal.mat using Guid(b33866f3865b7b342a7ef1e2a276fd40) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a8372c315feb745e23182c4ec92a47e') in 0.0130273 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop DVD Lens.mat
+  artifactKey: Guid(35b3103fe89fafd4fb8b2538ec90d2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Keyboard Backlight/Mats/LX Laptop DVD Lens.mat using Guid(35b3103fe89fafd4fb8b2538ec90d2ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0f31c454ee5447374733d66501d5b2dc') in 0.0206973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.634619 seconds.
+  path: Assets/LX Laptop/Asset/Textures/Keyboard Text Customizable.png
+  artifactKey: Guid(e3ead6bfcf46ebb408ea40638ca48c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Textures/Keyboard Text Customizable.png using Guid(e3ead6bfcf46ebb408ea40638ca48c24) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '231a11fef83f668b6bfd3c7bbf1880ee') in 0.0201727 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Keyboard Backlight/Mats/Keyboard Text Logo.png
+  artifactKey: Guid(a18a54ffb98f5e64e817697e762043cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Keyboard Backlight/Mats/Keyboard Text Logo.png using Guid(a18a54ffb98f5e64e817697e762043cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '42f1db00abd28b042c58bdad5b8d1bde') in 0.0087098 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Logo Place Holder.png
+  artifactKey: Guid(50786a099ef61d5469a3c16eaf33e9c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Logo Place Holder.png using Guid(50786a099ef61d5469a3c16eaf33e9c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15ac2737a5a92c8efbe187be312f27a4') in 0.0061583 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Keyboard Text Logo.png
+  artifactKey: Guid(77ce2c0d46236f24280d8ca5974a3339) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Keyboard Text Logo.png using Guid(77ce2c0d46236f24280d8ca5974a3339) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1b17d3da100dbc6800f92d52c02761ee') in 0.0086231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Materials/Keyboard Text Logo.png
+  artifactKey: Guid(82bdeb8c2bb6b40409ab6c12135b0662) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Materials/Keyboard Text Logo.png using Guid(82bdeb8c2bb6b40409ab6c12135b0662) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e1604cb50e5cd14e749fd2595d9d31a') in 0.0084213 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000043 seconds.
-  path: Assets/characters/textures/normal.png
-  artifactKey: Guid(55d59848a467294469b7eeeaaa43329e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/characters/textures/normal.png using Guid(55d59848a467294469b7eeeaaa43329e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00c63b91657112177e9a95eb9d3ca931') in 0.0102055 seconds
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Keyboard Backlight/Mats/Keyboard Text Logo.png
+  artifactKey: Guid(350922725c09ccb45ade2ba4be6f8d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Keyboard Backlight/Mats/Keyboard Text Logo.png using Guid(350922725c09ccb45ade2ba4be6f8d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '261f62bf27f551f1fcd0fad8356797e7') in 0.0083124 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3075.495804 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat
-  artifactKey: Guid(31d0dcc6f2dd4e4408d18036a2c93862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat using Guid(31d0dcc6f2dd4e4408d18036a2c93862) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'edcefe473ccaaf7ef913a50183fc67f6') in 1.2359241 seconds
+  Time since last request: 0.000027 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/Keyboard Text Logo.png
+  artifactKey: Guid(c5cfd5c04ab5b5741b284d1f718d8148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/Keyboard Text Logo.png using Guid(c5cfd5c04ab5b5741b284d1f718d8148) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2e1a38ec77db41eab233f3ab66e15cc9') in 0.0093684 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.700741 seconds.
+  path: Assets/LX Laptop/Asset/Textures/Logo Place Holder.png
+  artifactKey: Guid(c0063359d58163a428bf2b7a2d2411aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Textures/Logo Place Holder.png using Guid(c0063359d58163a428bf2b7a2d2411aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2bec38407856dcb42b88e93a8859a308') in 0.0096991 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Keyboard Backlight/Mats/Logo Place Holder.png
+  artifactKey: Guid(0fb393b042c255644a85ab28f1655606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Keyboard Backlight/Mats/Logo Place Holder.png using Guid(0fb393b042c255644a85ab28f1655606) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5d4f277255fe8f9789af72e00ec04c81') in 0.010089 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059288 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Materials/Logo Place Holder.png
+  artifactKey: Guid(1f68c8ea4350c3f4889546ced5d56d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Materials/Logo Place Holder.png using Guid(1f68c8ea4350c3f4889546ced5d56d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4ea454757ccf45392572a673e5178e09') in 0.0094166 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.078305 seconds.
+  path: Assets/LX Laptop/Asset/Textures/LX Laptop Logo Big.png
+  artifactKey: Guid(1f0fb9bbe655a3341a45c992ca2aec93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Textures/LX Laptop Logo Big.png using Guid(1f0fb9bbe655a3341a45c992ca2aec93) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd12d6b0f0f132dfacc15fac2b3521bb2') in 0.0134839 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/LX Laptop/Asset/Demo/Demo/ReflectionProbe-0.exr
+  artifactKey: Guid(86fa264dde7fb5747b94814bd55531fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Demo/Demo/ReflectionProbe-0.exr using Guid(86fa264dde7fb5747b94814bd55531fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0f363344005c90c4c767e18c6de11067') in 0.0830519 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/LX Laptop/Asset/Demo/Showcase Scene Mats and Textures/Plane Texture.png
+  artifactKey: Guid(955aaffb342ef804a8c1d5c0b9e81ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Demo/Showcase Scene Mats and Textures/Plane Texture.png using Guid(955aaffb342ef804a8c1d5c0b9e81ac7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '56f70f448e73a820255dff3962cfab6e') in 0.0099628 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.188652 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Keyboard Backlight/Mats/Webcam.png
+  artifactKey: Guid(d4bff12e6eba67c46b4a35b1742a4687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Keyboard Backlight/Mats/Webcam.png using Guid(d4bff12e6eba67c46b4a35b1742a4687) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '726903bbc117472387d893c3f0469203') in 0.0079095 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/Webcam.png
+  artifactKey: Guid(d30944ed329146745a89e5ccd40d6497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/Webcam.png using Guid(d30944ed329146745a89e5ccd40d6497) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8bb02e8e136df98f7f25dad876e988d0') in 0.0073173 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Keyboard Backlight/Mats/Webcam.png
+  artifactKey: Guid(2139da6386b20e44abc83a24d61ac02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Keyboard Backlight/Mats/Webcam.png using Guid(2139da6386b20e44abc83a24d61ac02d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd766e9fc5207ee6cfd34ea4ef940d45f') in 0.0083302 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Webcam.png
+  artifactKey: Guid(796a62f63b432fb4691a8d0ca0a258f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Webcam.png using Guid(796a62f63b432fb4691a8d0ca0a258f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7ae82b23031bb9f493fcb2385feb0719') in 0.0068253 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.089984 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Keyboard Backlight/Mats/Webcam.png
+  artifactKey: Guid(4c3e4d3cf358bff44a910289983a6484) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Keyboard Backlight/Mats/Webcam.png using Guid(4c3e4d3cf358bff44a910289983a6484) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd494e8a9e20823bea8df2db6c0f7a4d') in 0.0070992 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/LX Laptop/Asset/Demo/Showcase Scene Mats and Textures/Wood Normal Texture.png
+  artifactKey: Guid(0029dcb365842904181518f50bbca347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Demo/Showcase Scene Mats and Textures/Wood Normal Texture.png using Guid(0029dcb365842904181518f50bbca347) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63b903d4f06791a799cc78ceb055bfc5') in 0.0096133 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.023858 seconds.
+  path: Assets/Materials/LaptopS.mat
+  artifactKey: Guid(dd309d57d53d8a545b9bd9023fb1816d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/LaptopS.mat using Guid(dd309d57d53d8a545b9bd9023fb1816d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd1f65416d1ac37c7a83a0742d7267956') in 0.0165199 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 94.140950 seconds.
+  path: Assets/Scripts/TVInteractable.cs
+  artifactKey: Guid(ba55055de09b9c44989441315c56be04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TVInteractable.cs using Guid(ba55055de09b9c44989441315c56be04) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9c5650422df11180c247874514d03297') in 0.001876 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.925 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.887 seconds
+Domain Reload Profiling: 3818ms
+	BeginReloadAssembly (1901ms)
+		ExecutionOrderSort (3ms)
+		DisableScriptedObjects (425ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (4ms)
+		CreateAndSetChildDomain (675ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (918ms)
+		LoadAssemblies (927ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (293ms)
+			TypeCache.Refresh (32ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (239ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (888ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (667ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (133ms)
+			ProcessInitializeOnLoadAttributes (433ms)
+			ProcessInitializeOnLoadMethodAttributes (83ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (24ms)
+Refreshing native plugins compatible for Editor in 2.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6455 unused Assets / (3.8 MB). Loaded Objects now: 7255.
+Memory consumption went from 153.6 MB to 149.7 MB.
+Total: 22.344500 ms (FindLiveObjects: 1.954700 ms CreateObjectMapping: 2.490500 ms MarkObjects: 12.066500 ms  DeleteObjects: 5.828900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 443.173371 seconds.
+  path: Assets/LX Laptop/Asset/Demo
+  artifactKey: Guid(7051923763760594497457ea768d1177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Demo using Guid(7051923763760594497457ea768d1177) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5c6900edf3a49af6bf7155ae136c6729') in 0.1044966 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001950 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingOcclusion.mat
-  artifactKey: Guid(b51db210fe78df745a372851b3db949e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingOcclusion.mat using Guid(b51db210fe78df745a372851b3db949e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7cd64748cfd988b6951a14d0fb27e186') in 0.118559 seconds
+  Time since last request: 1.686837 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization
+  artifactKey: Guid(fbb4c2ef3384fc349867160da2505f31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization using Guid(fbb4c2ef3384fc349867160da2505f31) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8f580d8e2767fd5012cc3f6171776673') in 0.0012352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.104247 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/LX Laptop.fbx
+  artifactKey: Guid(d820ea74711a4164594420ec90743b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/LX Laptop.fbx using Guid(d820ea74711a4164594420ec90743b1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8b148ad3da9c382460ada2e4b6602e8') in 0.6395959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 36
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.387824 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges
+  artifactKey: Guid(76b36e94694f9b740ab471d7b4408590) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges using Guid(76b36e94694f9b740ab471d7b4408590) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '119d43e7b5dddfbe132deb8eb5fc3132') in 0.0007911 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.106013 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/LX Laptop.fbx
+  artifactKey: Guid(04537b76c041d6849b826191622e7060) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/LX Laptop.fbx using Guid(04537b76c041d6849b826191622e7060) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd957c7f593f02019bde7d3c0af6cdfd') in 0.0637153 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 38
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.869754 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Keyboard Backlight
+  artifactKey: Guid(b9867498fbc74d04cb76b147089bb16c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Keyboard Backlight using Guid(b9867498fbc74d04cb76b147089bb16c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b72c1e58b153ff88e9851bd2c1422b5') in 0.0008015 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.875526 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials
+  artifactKey: Guid(577f44dba61fea7448e88e53cc467765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials using Guid(577f44dba61fea7448e88e53cc467765) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc01ab37e182faf851a51d883e4b781f') in 0.0007902 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.276147 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/LX Laptop.fbx
+  artifactKey: Guid(9430aaae28b74a9448f21cb0bb2b8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/LX Laptop.fbx using Guid(9430aaae28b74a9448f21cb0bb2b8514) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9840f8f95d371f621d3ea74e5ce13171') in 0.0768298 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 43
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.659836 seconds.
+  path: Assets/Materials/LaptopS.mat
+  artifactKey: Guid(dd309d57d53d8a545b9bd9023fb1816d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/LaptopS.mat using Guid(dd309d57d53d8a545b9bd9023fb1816d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e3bfa4198a12d8b18efb2ade353a43ae') in 0.0271799 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1923.998178 seconds.
+  path: Assets/Scripts/Interactor.cs
+  artifactKey: Guid(c9d15ee7280559d4993336a2252169c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Interactor.cs using Guid(c9d15ee7280559d4993336a2252169c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a4c6c1ef517ae1d26576f07fe50331d') in 0.0482205 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.175731 seconds.
+  path: Assets/Scripts/Laptop.cs
+  artifactKey: Guid(c6c2baaa3bab44941aef8152e0545df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Laptop.cs using Guid(c6c2baaa3bab44941aef8152e0545df4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e1b49a780693e4504d69c2d736d0578') in 0.0069955 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 108.704460 seconds.
+  path: Assets/Scripts/PlayerMovement.cs
+  artifactKey: Guid(e6981002c70ec444aa40a78db991a45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerMovement.cs using Guid(e6981002c70ec444aa40a78db991a45f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4cbcecb6ee8a9ac0de0dd62e6b651252') in 0.0071347 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.615241 seconds.
+  path: Assets/Scripts/Speaker.cs
+  artifactKey: Guid(91408d6d2bf766a46834bf981381106f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Speaker.cs using Guid(91408d6d2bf766a46834bf981381106f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fdc778afaff102c36b3c6b0f5b005105') in 0.0087031 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  4.114 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.71 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.254 seconds
+Domain Reload Profiling: 5379ms
+	BeginReloadAssembly (2427ms)
+		ExecutionOrderSort (8ms)
+		DisableScriptedObjects (902ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (5ms)
+		CreateAndSetChildDomain (760ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (58ms)
+	LoadAllAssembliesAndSetupDomain (1559ms)
+		LoadAssemblies (1179ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (603ms)
+			TypeCache.Refresh (87ms)
+				TypeCache.ScanAssembly (2ms)
+			BuildScriptInfoCaches (458ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (1255ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1031ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (192ms)
+			ProcessInitializeOnLoadAttributes (736ms)
+			ProcessInitializeOnLoadMethodAttributes (79ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (24ms)
+Refreshing native plugins compatible for Editor in 3.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6455 unused Assets / (4.4 MB). Loaded Objects now: 7277.
+Memory consumption went from 151.9 MB to 147.5 MB.
+Total: 22.638700 ms (FindLiveObjects: 1.652900 ms CreateObjectMapping: 2.279200 ms MarkObjects: 12.780600 ms  DeleteObjects: 5.920200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1599.143930 seconds.
+  path: Assets/Images/letter-e.png
+  artifactKey: Guid(c4315acd3d1b6534cb85afee5afb89c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/letter-e.png using Guid(c4315acd3d1b6534cb85afee5afb89c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4982a64f438dcdfb7863e333677caf5c') in 1.7301709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 737.365501 seconds.
+  path: Assets/LX Laptop/Asset/Demo/Showcase Scene Mats and Textures/Black Metal.mat
+  artifactKey: Guid(416a9b5cedcac144296e7bdaa975b9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Demo/Showcase Scene Mats and Textures/Black Metal.mat using Guid(416a9b5cedcac144296e7bdaa975b9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '52d8a6b1b006e91b905379c24364cf0b') in 2.4510694 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000074 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
-  artifactKey: Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat using Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd004731bfc4f15d4ecfaef136511b661') in 0.6618716 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000062 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat
-  artifactKey: Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat using Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1cf4f10dafa35861737084dd4d637777') in 11.6188695 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000120 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat
-  artifactKey: Guid(15d0c3709176029428a0da2f8cecf0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat using Guid(15d0c3709176029428a0da2f8cecf0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aab97a8dbd0b1aed28a7049c8e8a513a') in 0.0407168 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingWireframe.mat
-  artifactKey: Guid(9875a245ac49007498213638a307faa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingWireframe.mat using Guid(9875a245ac49007498213638a307faa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5784b58e572fcb551335b2808f36da02') in 0.0526725 seconds
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Materials/Laptop Secondary Color.mat
+  artifactKey: Guid(0f8a5d25faa3f0e4688820b7980de49d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Materials/Laptop Secondary Color.mat using Guid(0f8a5d25faa3f0e4688820b7980de49d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2ce1f413c226c75537f0159d1a152200') in 0.0480226 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
-  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72704c901a8cb7bcbf23872a66e79f93') in 0.0601448 seconds
+  Time since last request: 0.000070 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/Laptop Secondary Color.mat
+  artifactKey: Guid(1f153d2f47c25ac4aa52e6a264f3f055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/Laptop Secondary Color.mat using Guid(1f153d2f47c25ac4aa52e6a264f3f055) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ba503491fee274d95f1dcd23a5c36ad4') in 0.032408 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/LX Laptop Bezel.mat
+  artifactKey: Guid(d08df7f7e44d4d847bb622f4ac9409d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/LX Laptop Bezel.mat using Guid(d08df7f7e44d4d847bb622f4ac9409d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0f7879d11f4e51f987f60903cc6f4955') in 0.0286937 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Keyboard Backlight/Mats/LX Laptop Bezel.mat
+  artifactKey: Guid(feeacbdef997499469e32f5333437b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Keyboard Backlight/Mats/LX Laptop Bezel.mat using Guid(feeacbdef997499469e32f5333437b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '37cc9161d521ba2148761eb2b36e1f31') in 0.0249056 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/LX Laptop Bezel.mat
+  artifactKey: Guid(6a6f1f62c5f79cd4cbfc68f2334ba817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel/Materials/LX Laptop Bezel.mat using Guid(6a6f1f62c5f79cd4cbfc68f2334ba817) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '10b0d54d8eed1d457a8a5575698425d6') in 0.0564067 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Keyboard Backlight/Mats/LX Laptop Camera.mat
+  artifactKey: Guid(7ea1d3eb26e55644c87c50264337e7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Hinges/Keyboard Backlight/Mats/LX Laptop Camera.mat using Guid(7ea1d3eb26e55644c87c50264337e7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a95da8f4c67945b16625fd2e9aed18f0') in 0.0468591 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Keyboard Backlight/Mats/LX Laptop Bezel.mat
+  artifactKey: Guid(982b4003213b9e64abf55901c816c201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Keyboard Backlight/Mats/LX Laptop Bezel.mat using Guid(982b4003213b9e64abf55901c816c201) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c24a272d829173fea40c54ef54f69e7d') in 0.0337737 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Keyboard Backlight/Mats/LX Laptop Camera.mat
+  artifactKey: Guid(fd23381013c674941813408b88f01dda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization/Keyboard Backlight/Mats/LX Laptop Camera.mat using Guid(fd23381013c674941813408b88f01dda) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc78464eff1e152ae49212c80f54430e') in 0.0212156 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Materials/LX Laptop Bezel.mat
+  artifactKey: Guid(ecf60345535bc2e4b849b05341ca320c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Fully Customizable Colors/Materials/LX Laptop Bezel.mat using Guid(ecf60345535bc2e4b849b05341ca320c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '44405426c1a1ab58a701bcf94aa29a1b') in 0.0160433 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Laptop Secondary Color.mat
+  artifactKey: Guid(86dfecad4dd1241408fe331905cc8311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Models/LX Laptop Simple Customization With Bezel And Hinges/Materials/Laptop Secondary Color.mat using Guid(86dfecad4dd1241408fe331905cc8311) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a69a1be6425fc926495e94ba8456725') in 0.0159022 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  4.261 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.042 seconds
+Domain Reload Profiling: 5315ms
+	BeginReloadAssembly (2227ms)
+		ExecutionOrderSort (6ms)
+		DisableScriptedObjects (420ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (4ms)
+		CreateAndSetChildDomain (979ms)
+	RebuildCommonClasses (84ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (75ms)
+	LoadAllAssembliesAndSetupDomain (1864ms)
+		LoadAssemblies (1478ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (651ms)
+			TypeCache.Refresh (88ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (510ms)
+			ResolveRequiredComponents (24ms)
+	FinalizeReload (1043ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (827ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (192ms)
+			ProcessInitializeOnLoadAttributes (537ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6455 unused Assets / (4.0 MB). Loaded Objects now: 7299.
+Memory consumption went from 152.0 MB to 148.0 MB.
+Total: 22.810400 ms (FindLiveObjects: 2.256300 ms CreateObjectMapping: 2.215300 ms MarkObjects: 12.778000 ms  DeleteObjects: 5.557000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 674.480397 seconds.
+  path: Assets/Images/dot.png
+  artifactKey: Guid(3025b68d3d2ac4042bddc92c97059411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/dot.png using Guid(3025b68d3d2ac4042bddc92c97059411) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7fa8a5adba01966d837a44a4173bbbf4') in 0.3438845 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 180.792383 seconds.
+  path: Assets/Images/dry-clean.png
+  artifactKey: Guid(85f58a2c7e55b614d83ea874e9a3a4ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/dry-clean.png using Guid(85f58a2c7e55b614d83ea874e9a3a4ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f512941b67963d188aa05ecbb488b3b1') in 0.0673661 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 12797.537488 seconds.
+  path: Assets/LX Laptop/Asset/Textures
+  artifactKey: Guid(1426fe890c865c54b921ea06abad924f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/Asset/Textures using Guid(1426fe890c865c54b921ea06abad924f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83e7ad940e7f15e6406d484299df0f18') in 0.0530542 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 383.904712 seconds.
+  path: Assets/LX Laptop/ImageToStl.com_Sketchfab_2023_07_28_17_26_19.fbx
+  artifactKey: Guid(3df3fd9e58ffe214980d3328c3ac46d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LX Laptop/ImageToStl.com_Sketchfab_2023_07_28_17_26_19.fbx using Guid(3df3fd9e58ffe214980d3328c3ac46d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bada5d11d16faa3eb980d62d484c6177') in 2.9181938 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
 

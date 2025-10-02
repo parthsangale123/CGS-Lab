@@ -27,6 +27,12 @@ public class MouseLook : MonoBehaviour
         controls.Player.Look.Disable();
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
         if(GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
