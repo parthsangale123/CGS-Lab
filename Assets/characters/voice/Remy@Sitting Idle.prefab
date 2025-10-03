@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &752615048909746441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6709843
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.17975211
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      propertyPath: m_Name
+      value: Remy@Sitting Idle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7753955110575288516}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6840349830448602031}
+  m_SourcePrefab: {fileID: 100100000, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+--- !u!1 &482090458071026776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dbb339fbe7e36b142acc2ab5d87529c2, type: 3}
+  m_PrefabInstance: {fileID: 752615048909746441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7753955110575288516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482090458071026776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3125c85e9da23194b857ccc15a3e00fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingNode:
+    npcSentence: "Ah, a new face entering our chambers? \u2014Hi, I am a game developer
+      at CGS."
+    playerOptions:
+    - optionText: What games do you work on?
+      nextNode:
+        npcSentence: "Pixel art, 3D, XR \u2013 all sorts"
+        playerOptions:
+        - optionText: Crazy, how many have you made?
+          nextNode:
+            npcSentence: Many for game jams and hackathons, a few polished and some
+              half made which got forgotten in repositories.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: a29bae2526caa084c8a79e295242e103, type: 3}
+        - optionText: XR? That sounds cool!
+          nextNode:
+            npcSentence: Perks of having our own lab, not just testing but can play
+              VR games all night long.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 74adbe416c0a0e94094af88f24398851, type: 3}
+        voiceLine: {fileID: 8300000, guid: 99fa9149c21e17f4c91660ea223ad001, type: 3}
+    - optionText: Is it fun?
+      nextNode:
+        npcSentence: Think about it this way - you are designing a world where things
+          happen according to rules you dictate. Sounds cool eh?
+        playerOptions:
+        - optionText: Do you think I can be good at it?
+          nextNode:
+            npcSentence: Of course, you are the chosen one.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 34de1534a797cb44ca9d7bda2e1b0868, type: 3}
+        - optionText: Do you all help us with stuff?
+          nextNode:
+            npcSentence: Yes but we also push you to explore things on your own
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: d98bf4ce6901e074bac36e70694f5e5e, type: 3}
+        voiceLine: {fileID: 8300000, guid: 52f269048d3e6954cb9cc35dce51fe95, type: 3}
+    - optionText: That sounds tough
+      nextNode:
+        npcSentence: Nah, only thing tough is to finish those unfinished projects
+        playerOptions:
+        - optionText: Doesn't that prove me correct?
+          nextNode:
+            npcSentence: It's more due to the fact we get distracted in unplanned
+              VR game nights.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: e4aff674009957d4eaa0c41a41599170, type: 3}
+        - optionText: Unfinished? Why?
+          nextNode:
+            npcSentence: I started off slow but then went on to achieve levels my
+              GPU couldn't support.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 8768f2036d6da014e89a42b29a81f1a2, type: 3}
+        - optionText: Can I try those?
+          nextNode:
+            npcSentence: Please do!! It's always difficult to get people to playtest.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 81536d2e32f768749bddbcea15ef989f, type: 3}
+        voiceLine: {fileID: 8300000, guid: 7e949f045f37098478d1ef4f9ed5ab98, type: 3}
+    - optionText: Do you think I can do it?
+      nextNode:
+        npcSentence: "Well why not? It\u2019s just about bringing your crazy ideas
+          to life."
+        playerOptions:
+        - optionText: Can I make GTA V?
+          nextNode:
+            npcSentence: Love the energy but alone is a herculean task
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 08a904d8dcc8b2840b73972bcda27ab9, type: 3}
+        - optionText: What is an ideal starting point?
+          nextNode:
+            npcSentence: "One mechanic, one level, perfect it \u2013 a great start
+              to new beginnings"
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 2b797cd7cb78dfc47bfc2997da974640, type: 3}
+        voiceLine: {fileID: 8300000, guid: 35c84c4c372788e4e8c87023adcbf9ce, type: 3}
+    voiceLine: {fileID: 8300000, guid: 424d7e55f8c07f2428d08b1e8b2556bb, type: 3}
+--- !u!65 &6840349830448602031
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482090458071026776}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.4522357, y: 3.0668435, z: 1.258163}
+  m_Center: {x: -0.101033926, y: 1.0334215, z: -0.20360875}
