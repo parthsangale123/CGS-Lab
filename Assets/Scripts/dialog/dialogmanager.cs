@@ -75,7 +75,7 @@ public class DialogueManager : MonoBehaviour
             // Play the audio clip
             audioSource.PlayOneShot(node.voiceLine);
             // Calculate the typing speed to match the audio length
-            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length;
+            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length /2f;
         }
         else
         {
