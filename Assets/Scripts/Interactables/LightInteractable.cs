@@ -19,5 +19,11 @@ public class LightInteractable : MonoBehaviour, IInteractable
         }
 
         Debug.Log(isOn ? "Lights turned ON" : "Lights turned OFF");
+
+        string message = isOn ? "Lights turned ON" : "Lights turned OFF";
+        if (NotificationManager.Instance != null)
+        {
+            NotificationManager.Instance.ShowNotification(message);
+        }
     }
 }

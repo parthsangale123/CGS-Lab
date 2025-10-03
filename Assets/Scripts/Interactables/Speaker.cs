@@ -65,6 +65,7 @@ public class Speaker : MonoBehaviour, IInteractable
         audioSource.clip = playlist[index];
         audioSource.Play();
         Debug.Log($"Now playing: {playlist[index].name}");
+        NotificationManager.Instance.ShowNotification($"Now playing: {playlist[index].name}");
     }
 
     private void StopSpeaker()
@@ -72,5 +73,6 @@ public class Speaker : MonoBehaviour, IInteractable
         audioSource.Stop();
         currentTrack = -1;// Reset
         Debug.Log("Speaker stopped.");
+        NotificationManager.Instance.ShowNotification("Speaker stopped.");
     }
 }
