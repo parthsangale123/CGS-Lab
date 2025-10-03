@@ -1,93 +1,149 @@
-// DialogueManager.cs (Updated)
+// DialogueManager.cs (Updated for Synced Audio)
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+
+[RequireComponent(typeof(AudioSource))] // Ensures an AudioSource is on this GameObject
 public class DialogueManager : MonoBehaviour
 {
+    [Header("FPS Controller")]
     [SerializeField] private GameObject crosshair;
+    public bool istalking = false;
 
-    // --- UI Elements ---
+    [Header("UI Elements")]
     public TextMeshProUGUI npcSentenceText;
-    public Button option1Button;
-    public Button option2Button;
-    public Button endButton; // <<< NEW: Add a reference for the End button
     public GameObject dialoguePanel; 
-    public bool istalking=false;
+
+    [Header("Dynamic Options")]
+    public GameObject optionButtonPrefab;
+    public Transform optionsContainer;
+    [SerializeField] private string endDialogueText = "Leave";
+    
+    [Header("Typing Speed")]
+    [Tooltip("The default speed for typing when no audio is present.")]
+    [SerializeField] private float defaultTypingSpeed = 0.05f;
+
     // --- Private variables ---
     private DialogueNode currentNode;
-    private TextMeshProUGUI option1ButtonText;
-    private TextMeshProUGUI option2ButtonText;
+    private AudioSource audioSource; // NEW: To play the voice lines
 
     void Awake()
     {
-        option1ButtonText = option1Button.GetComponentInChildren<TextMeshProUGUI>();
-        option2ButtonText = option2Button.GetComponentInChildren<TextMeshProUGUI>();
-        
-        // --- NEW: Set up the end button ---
-        // Make sure the end button calls the EndDialogue method when clicked.
-        if (endButton != null)
-        {
-            endButton.onClick.AddListener(EndDialogue);
-        }
+        // NEW: Get the AudioSource component
+        audioSource = GetComponent<AudioSource>();
         
         dialoguePanel.SetActive(false);
+        
+        if (optionButtonPrefab == null) Debug.LogError("Option Button Prefab not assigned!");
+        if (optionsContainer == null) Debug.LogError("Options Container not assigned!");
     }
 
     public void StartDialogue(DialogueNode startingNode)
     {
-        // Enable cursor for UI interaction
+        istalking = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        crosshair.SetActive(false);
+        if (crosshair != null) crosshair.SetActive(false);
 
-        istalking =true;
         dialoguePanel.SetActive(true);
-        currentNode = startingNode;
-        DisplayNode(currentNode);
+        DisplayNode(startingNode);
     }
 
     private void DisplayNode(DialogueNode node)
     {
+        currentNode = node;
+        npcSentenceText.text = "";
+        ClearOptions();
+        
+        // NEW: Stop any previously playing audio
+        audioSource.Stop();
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(node.npcSentence));
+        StartCoroutine(TypeSentence(node));
+    }
 
-        // Check if there are player options to display
-        if (node.playerOptions.Length >= 2)
+    // --- MAJOR CHANGE: This coroutine now handles audio sync ---
+    IEnumerator TypeSentence(DialogueNode node)
+    {
+        float delayPerCharacter;
+
+        // Check if a voice line is attached and the sentence isn't empty
+        if (node.voiceLine != null && node.npcSentence.Length > 0)
         {
-            // --- Show option buttons, hide end button ---
-            option1Button.gameObject.SetActive(true);
-            option2Button.gameObject.SetActive(true);
-            if(endButton != null) endButton.gameObject.SetActive(false); // NEW
-
-            option1ButtonText.text = node.playerOptions[0].optionText;
-            option2ButtonText.text = node.playerOptions[1].optionText;
-
-            option1Button.onClick.RemoveAllListeners();
-            option2Button.onClick.RemoveAllListeners();
-
-            option1Button.onClick.AddListener(() => ChooseOption(0));
-            option2Button.onClick.AddListener(() => ChooseOption(1));
+            // Play the audio clip
+            audioSource.PlayOneShot(node.voiceLine);
+            // Calculate the typing speed to match the audio length
+            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length;
         }
         else
         {
-            // --- This is the end of a branch ---
-            // --- Hide option buttons, show end button ---
-            option1Button.gameObject.SetActive(false);
-            option2Button.gameObject.SetActive(false);
-            if(endButton != null) endButton.gameObject.SetActive(true); // NEW
+            // Fallback to default speed if there's no audio
+            delayPerCharacter = defaultTypingSpeed;
+        }
+
+        // Type out the sentence using the calculated or default delay
+        foreach (char letter in node.npcSentence.ToCharArray())
+        {
+            npcSentenceText.text += letter;
+            yield return new WaitForSeconds(delayPerCharacter);
+        }
+
+        // After typing/audio is complete, create the option buttons
+        if (node.playerOptions.Length > 0)
+        {
+            for (int i = 0; i < node.playerOptions.Length; i++)
+            {
+                CreateOptionButton(node.playerOptions[i], i);
+            }
+        }
+        else
+        {
+            CreateEndButton();
+        }
+    }
+
+    // ... (The rest of the script from CreateOptionButton downwards is unchanged) ...
+
+    private void CreateOptionButton(PlayerOption option, int index)
+    {
+        GameObject buttonGO = Instantiate(optionButtonPrefab, optionsContainer);
+        TextMeshProUGUI buttonText = buttonGO.GetComponentInChildren<TextMeshProUGUI>();
+        Button button = buttonGO.GetComponent<Button>();
+
+        buttonText.text = $"{index + 1}. {option.optionText}";
+        button.onClick.AddListener(() => ChooseOption(index));
+    }
+    
+    private void CreateEndButton()
+    {
+        GameObject buttonGO = Instantiate(optionButtonPrefab, optionsContainer);
+        TextMeshProUGUI buttonText = buttonGO.GetComponentInChildren<TextMeshProUGUI>();
+        Button button = buttonGO.GetComponent<Button>();
+
+        buttonText.text = endDialogueText;
+        button.onClick.AddListener(EndDialogue);
+    }
+
+    private void ClearOptions()
+    {
+        foreach (Transform child in optionsContainer)
+        {
+            Destroy(child.gameObject);
         }
     }
 
     private void ChooseOption(int optionIndex)
     {
+        ClearOptions();
+
         if (optionIndex < currentNode.playerOptions.Length)
         {
             DialogueNode nextNode = currentNode.playerOptions[optionIndex].nextNode;
             if (nextNode != null)
             {
-                currentNode = nextNode;
-                DisplayNode(currentNode);
+                DisplayNode(nextNode);
             }
             else
             {
@@ -96,27 +152,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // This method is now also called by the endButton's onClick event
-    private void EndDialogue()
+    public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
-        Debug.Log("Dialogue ended.");
+        audioSource.Stop(); // Stop audio when ending dialogue
+        ClearOptions();
         istalking = false;
 
-        // Back to FPS control
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        crosshair.SetActive(true);
-        
-    }
-    
-    IEnumerator TypeSentence(string sentence)
-    {
-        npcSentenceText.text = "";
-        foreach (char letter in sentence.ToCharArray())
-        {
-            npcSentenceText.text += letter;
-            yield return new WaitForSeconds(0.05f);
-        }
+        if (crosshair != null) crosshair.SetActive(true);
     }
 }
