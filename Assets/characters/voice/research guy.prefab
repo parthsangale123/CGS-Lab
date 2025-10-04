@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5666190324391139363
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.120998
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.8206115
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      propertyPath: m_Name
+      value: research guy
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5741740190273280387}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4528511944736951566}
+  m_SourcePrefab: {fileID: 100100000, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+--- !u!1 &4783724153337013618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b147f3c6099e19944a0841a00515b7a6, type: 3}
+  m_PrefabInstance: {fileID: 5666190324391139363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &5741740190273280387
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783724153337013618}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.73960304, y: 1.9519992, z: 0.6798279}
+  m_Center: {x: -0.06652546, y: 0.4759996, z: 0.17845404}
+--- !u!114 &4528511944736951566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783724153337013618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3125c85e9da23194b857ccc15a3e00fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingNode:
+    npcSentence: "A curious fresher in these realms huh? \u2014 Greetings! I am a
+      researcher here."
+    playerOptions:
+    - optionText: What do you work on?
+      nextNode:
+        npcSentence: "Most our work involves low level programming I\u2019d say"
+        playerOptions:
+        - optionText: Did not understand
+          nextNode:
+            npcSentence: "It\u2019s like making the tools to develop your final product."
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: bb656d7d04e4e114bb55fb13102a7c0a, type: 3}
+        - optionText: Examples?
+          nextNode:
+            npcSentence: Shader programming, AI/ML in game, physics and GPU programming
+              and a lot more
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 4a69957c096124a41adca0c3273c3e60, type: 3}
+        voiceLine: {fileID: 8300000, guid: 6f3addd34b458f7408bebc888dbe997d, type: 3}
+    - optionText: "Are you all \u2013 like buried in books the entire day?"
+      nextNode:
+        npcSentence: Nah no, seems you are funnier than you are curious
+        playerOptions:
+        - optionText: I was seriously asking
+          nextNode:
+            npcSentence: "Umm no, there\u2019s some reading involved but a lot is
+              about experimenting."
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 6082cbcdbbe1038488cf7e1271df95fd, type: 3}
+        - optionText: Yeah sure I am.
+          nextNode:
+            npcSentence: Sure but yeah, we experiment game mechanics, graphics and
+              stuff mostly
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: bd4503076163e934ab8fd976a8d2bbb0, type: 3}
+        voiceLine: {fileID: 8300000, guid: 7fa3822779da1bc45abe3e0c10c417ec, type: 3}
+    - optionText: Sounds tough.
+      nextNode:
+        npcSentence: Very few walk this path passerby
+        playerOptions:
+        - optionText: Researchers are less that means?
+          nextNode:
+            npcSentence: Uh no, I was kidding, toughness depends on what you choose
+              to do research on
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 6abe84424c96cfa459de1192be84d1f9, type: 3}
+        - optionText: It is tough then?
+          nextNode:
+            npcSentence: The only part that I find tough is running out of ideas
+              to implement.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: ba56f14df031ed440b1b4bbdb0d394af, type: 3}
+        - optionText: Why do people randomly call me passerby here?
+          nextNode:
+            npcSentence: Not sure, the game development guy might know.
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: 3f3190d354c18844ba421d2f7f3ed6bf, type: 3}
+        voiceLine: {fileID: 8300000, guid: eef41ce8bbcf77a4394ec2e9bb9d3335, type: 3}
+    - optionText: ' You reckon I can do it?'
+      nextNode:
+        npcSentence: At the moment? Maybe no
+        playerOptions:
+        - optionText: Why??
+          nextNode:
+            npcSentence: You can after you have had some understanding about game
+              mechanics and graphics
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: f8a6cc7565c378f45acb4c9f23814b9a, type: 3}
+        - optionText: Other portfolios got better seniors atleast they think I can
+            do it
+          nextNode:
+            npcSentence: You will walk this path one day passerby and truly understand
+              my message that day
+            playerOptions: []
+            voiceLine: {fileID: 8300000, guid: d939a2790fd48454fb4e4fb0a2a0b7b4, type: 3}
+        voiceLine: {fileID: 8300000, guid: 445e2803eb4c2e548bae502ebb97567c, type: 3}
+    voiceLine: {fileID: 8300000, guid: 4921c6b93ee8fac4f8ee1dca2a1aeb28, type: 3}

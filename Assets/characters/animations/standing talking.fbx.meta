@@ -1,39 +1,9 @@
 fileFormatVersion: 2
-guid: dbb339fbe7e36b142acc2ab5d87529c2
+guid: 9f5edee9bd4af1e49bd531c1395bdc32
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bodymat
-    second: {fileID: 2100000, guid: 776b7294bda0c9d4aa4491b58326e8f2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bottommat
-    second: {fileID: 2100000, guid: f032ab7c6b5c04d4ea07ddd5a9c87f68, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eyelashmat
-    second: {fileID: 2100000, guid: 5b55289048bda7f49b82803334587c46, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hairmat
-    second: {fileID: 2100000, guid: f0c60cbe5249f76429742e63fff7a0a6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Shoesmat
-    second: {fileID: 2100000, guid: c96558deab2b4ad4caa5abf6e2b56cf6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Topmat
-    second: {fileID: 2100000, guid: 1b9f5356526a905459e7551ac1b7ac44, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

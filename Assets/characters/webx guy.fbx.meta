@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dbb339fbe7e36b142acc2ab5d87529c2
+guid: d86097527b038294fa063194bedc5be1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,33 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bodymat
-    second: {fileID: 2100000, guid: 776b7294bda0c9d4aa4491b58326e8f2, type: 2}
+      name: Ch31_body
+    second: {fileID: 2100000, guid: 0705e5b048827534ba652b936d228d57, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bottommat
-    second: {fileID: 2100000, guid: f032ab7c6b5c04d4ea07ddd5a9c87f68, type: 2}
+      name: Ch31_hair
+    second: {fileID: 2100000, guid: e7931405d5e53b94a890bd578fc9d206, type: 2}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Eyelashmat
-    second: {fileID: 2100000, guid: 5b55289048bda7f49b82803334587c46, type: 2}
+      name: Ch31_1001_Diffuse
+    second: {fileID: 2800000, guid: 1508995b9dd3e9347bc4c066b1c60c1c, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Hairmat
-    second: {fileID: 2100000, guid: f0c60cbe5249f76429742e63fff7a0a6, type: 2}
+      name: Ch31_1001_Glossiness
+    second: {fileID: 2800000, guid: 258e6ee04667be04fb132fa4c720dcbe, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Shoesmat
-    second: {fileID: 2100000, guid: c96558deab2b4ad4caa5abf6e2b56cf6, type: 2}
+      name: Ch31_1001_Normal
+    second: {fileID: 2800000, guid: 5ee8921d57e2d0948baba7446dd6bb49, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Topmat
-    second: {fileID: 2100000, guid: 1b9f5356526a905459e7551ac1b7ac44, type: 2}
+      name: Ch31_1001_Specular
+    second: {fileID: 2800000, guid: ffc6d0f862931de41a72482827af9e4b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch31_1002_Diffuse
+    second: {fileID: 2800000, guid: e72ec983cf4e8b24a8404be95b33166d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,7 +57,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -121,13 +126,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0

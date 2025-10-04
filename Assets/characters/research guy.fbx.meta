@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dbb339fbe7e36b142acc2ab5d87529c2
+guid: b147f3c6099e19944a0841a00515b7a6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,38 +7,63 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bodymat
-    second: {fileID: 2100000, guid: 776b7294bda0c9d4aa4491b58326e8f2, type: 2}
+      name: Ch06_body
+    second: {fileID: 2100000, guid: 4b38e4f372f085844bd9d829abf07f12, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Bottommat
-    second: {fileID: 2100000, guid: f032ab7c6b5c04d4ea07ddd5a9c87f68, type: 2}
+      name: Ch06_body1
+    second: {fileID: 2100000, guid: 88a825985b4b5e647b4abe770c4e08f2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Eyelashmat
-    second: {fileID: 2100000, guid: 5b55289048bda7f49b82803334587c46, type: 2}
+      name: Ch06_eyelashes
+    second: {fileID: 2100000, guid: 7d0128300be7e65478853cd681c3c01d, type: 2}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Hairmat
-    second: {fileID: 2100000, guid: f0c60cbe5249f76429742e63fff7a0a6, type: 2}
+      name: Ch06_1001_Diffuse
+    second: {fileID: 2800000, guid: 658207d644a84ab4d9f108fdd5809c88, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Shoesmat
-    second: {fileID: 2100000, guid: c96558deab2b4ad4caa5abf6e2b56cf6, type: 2}
+      name: Ch06_1001_Glossiness
+    second: {fileID: 2800000, guid: bc788a72d707ad1418eb6a917ed398e1, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Topmat
-    second: {fileID: 2100000, guid: 1b9f5356526a905459e7551ac1b7ac44, type: 2}
+      name: Ch06_1001_Normal
+    second: {fileID: 2800000, guid: 5e5aa2dd52fa0734cb42e559cb8950e0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch06_1001_Specular
+    second: {fileID: 2800000, guid: f799b26cf0ae1af419b2382db3890db2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch06_1002_Diffuse
+    second: {fileID: 2800000, guid: 2ea0ea58da48bcb40bbe9d8a47fa8bc0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch06_1002_Glossiness
+    second: {fileID: 2800000, guid: cc2ac661dcb1481438677a99160538a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch06_1002_Normal
+    second: {fileID: 2800000, guid: 836945f3e74a86e43a550b999c1dec5c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ch06_1002_Specular
+    second: {fileID: 2800000, guid: a53d9f15143c02149bc275884aacaadb, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
