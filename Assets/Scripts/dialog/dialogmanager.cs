@@ -27,7 +27,8 @@ public class DialogueManager : MonoBehaviour
 
     // --- Private variables ---
     private DialogueNode currentNode;
-    private AudioSource audioSource; // NEW: To play the voice lines
+    private AudioSource audioSource; 
+    private Animator anim;// NEW: To play the voice lines
 
     void Awake()
     {
@@ -40,19 +41,22 @@ public class DialogueManager : MonoBehaviour
         if (optionsContainer == null) Debug.LogError("Options Container not assigned!");
     }
 
-    public void StartDialogue(DialogueNode startingNode)
+    public void StartDialogue(DialogueNode startingNode, Animator j)
     {
         istalking = true;
+        anim=j;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         if (crosshair != null) crosshair.SetActive(false);
 
         dialoguePanel.SetActive(true);
         DisplayNode(startingNode);
+        
     }
 
     private void DisplayNode(DialogueNode node)
     {
+        anim.SetBool("istalking", true);
         currentNode = node;
         npcSentenceText.text = "";
         ClearOptions();
@@ -62,6 +66,7 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(node));
+        
     }
 
     // --- MAJOR CHANGE: This coroutine now handles audio sync ---
@@ -74,8 +79,10 @@ public class DialogueManager : MonoBehaviour
         {
             // Play the audio clip
             audioSource.PlayOneShot(node.voiceLine);
+            Debug.Log(node.voiceLine.length);
+            Debug.Log(node.npcSentence.Length);
             // Calculate the typing speed to match the audio length
-            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length /2f;
+            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length/1.25f;
         }
         else
         {
@@ -89,7 +96,7 @@ public class DialogueManager : MonoBehaviour
             npcSentenceText.text += letter;
             yield return new WaitForSeconds(delayPerCharacter);
         }
-
+        anim.SetBool("istalking", false);
         // After typing/audio is complete, create the option buttons
         if (node.playerOptions.Length > 0)
         {
