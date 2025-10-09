@@ -27,11 +27,13 @@ public class TVInteractable : MonoBehaviour, IInteractable
         if (isPlaying)
         {
             videoPlayer.Pause();// pause the video
+            NotificationManager.Instance.ShowNotification($"Video is Paused...");
         }
         else
         {
             videoPlayer.Play();
             tvScreenRenderer.material = originalMaterial;// show video
+            NotificationManager.Instance.ShowNotification($"Video is Playing...");
         }
 
         isPlaying = !isPlaying;
