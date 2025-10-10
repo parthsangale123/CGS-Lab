@@ -15,6 +15,10 @@ public class mainmenu : MonoBehaviour
         anim.SetBool("fade", true);
         StartCoroutine(load());
     }
+    public void OpenURL(string url)
+    {
+               Application.OpenURL(url);
+    }
     IEnumerator load()
     {
         yield return new WaitForSeconds(1);
