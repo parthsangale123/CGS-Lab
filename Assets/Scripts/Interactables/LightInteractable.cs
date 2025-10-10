@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class LightInteractable : MonoBehaviour, IInteractable
 {
-
+    private AudioSource audioSource;
     [SerializeField] private Light[] lights; // Lights to control by the switch
     private bool isOn = false;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void Interact()
     {
@@ -24,6 +29,7 @@ public class LightInteractable : MonoBehaviour, IInteractable
         if (NotificationManager.Instance != null)
         {
             NotificationManager.Instance.ShowNotification(message);
+            audioSource.Play();
         }
     }
 }
