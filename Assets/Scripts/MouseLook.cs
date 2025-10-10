@@ -33,11 +33,11 @@ public class MouseLook : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
-        float mouseX = lookInput.x * sensitivity * Time.deltaTime;
-        float mouseY = lookInput.y * sensitivity * Time.deltaTime;
+        float mouseX = lookInput.x * sensitivity * Time.fixedDeltaTime;
+        float mouseY = lookInput.y * sensitivity * Time.fixedDeltaTime;
 
         // Rotate camera vertically (pitch)
         xRotation -= mouseY;

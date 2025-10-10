@@ -3,11 +3,11 @@ using UnityEngine.Video;
 
 public class TVInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private VideoPlayer videoPlayer;        // VideoPlayer component
-    [SerializeField] private Renderer tvScreenRenderer;      // TV screen mesh renderer
-    [SerializeField] private Material blackMaterial;         // Black material when TV is off
-    [SerializeField] private VideoClip firstVideo;           // First video clip
-    [SerializeField] private VideoClip secondVideo;          // Second video clip
+    [SerializeField] private VideoPlayer videoPlayer;// VideoPlayer component
+    [SerializeField] private Renderer tvScreenRenderer;// TV screen mesh renderer
+    [SerializeField] private Material blackMaterial;// Black material when TV is off
+    [SerializeField] private VideoClip firstVideo;// First video clip
+    [SerializeField] private VideoClip secondVideo;// Second video clip
 
     private Material originalMaterial;
     private enum TVState { Off, PlayingFirst, PlayingSecond }
