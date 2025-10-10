@@ -41,7 +41,7 @@ public class Interactor : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-
+        if(FindObjectOfType<DialogueManager>().istalking) return;
         if (currentTarget != null)
         {
             currentTarget.Interact();

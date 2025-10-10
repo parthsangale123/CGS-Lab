@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Rendering.Universal.Internal;
 
 [RequireComponent(typeof(AudioSource))] // Ensures an AudioSource is on this GameObject
 public class DialogueManager : MonoBehaviour
@@ -11,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     [Header("FPS Controller")]
     [SerializeField] private GameObject crosshair;
     public bool istalking = false;
-
+    private bool isdone = false;
     [Header("UI Elements")]
     public TextMeshProUGUI npcSentenceText;
     public GameObject dialoguePanel; 
@@ -29,7 +30,13 @@ public class DialogueManager : MonoBehaviour
     private DialogueNode currentNode;
     private AudioSource audioSource; 
     private Animator anim;// NEW: To play the voice lines
-
+    private Transform tr;
+    private Vector3 from;
+    private Vector3 currentangle;
+    private DialogueNode dd;
+    private Transform tr2;
+    private Vector3 currentcamera;
+    private Animator anim2;
     void Awake()
     {
         // NEW: Get the AudioSource component
@@ -40,18 +47,26 @@ public class DialogueManager : MonoBehaviour
         if (optionButtonPrefab == null) Debug.LogError("Option Button Prefab not assigned!");
         if (optionsContainer == null) Debug.LogError("Options Container not assigned!");
     }
-
-    public void StartDialogue(DialogueNode startingNode, Animator j)
+    private void Start()
     {
+        tr=FindObjectOfType<PlayerMovement>().transform;
+        tr2 = FindObjectOfType<MouseLook>().transform;
+        anim2=GetComponent<Animator>();
+    }
+    public void StartDialogue(DialogueNode startingNode, Animator j, Vector3 To, Vector3 angle, Vector3 CameraAngles)
+    {
+        from=tr.position;
         istalking = true;
         anim=j;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         if (crosshair != null) crosshair.SetActive(false);
-
-        dialoguePanel.SetActive(true);
-        DisplayNode(startingNode);
-        
+        dd = startingNode;
+        currentangle = tr.eulerAngles;
+        currentcamera = tr2.eulerAngles;
+        isdone = false;
+       
+        StartCoroutine(why(To, angle, CameraAngles + angle));
     }
 
     private void DisplayNode(DialogueNode node)
@@ -161,13 +176,44 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        isdone = true;
+        
+        Go(from, currentangle, currentcamera+currentangle);
+        StartCoroutine(Fade());
+        
+        
+    }
+    private void Go(Vector3 final, Vector3 finalangle, Vector3 finalcamera)
+    {
+        
+            tr.position = final;
+            tr.eulerAngles = finalangle;
+            tr2.eulerAngles = finalcamera;
+        
+        if (istalking && !isdone)
+        {
+            dialoguePanel.SetActive(true);
+            DisplayNode(dd);
+        }
+    }
+    IEnumerator Fade()
+    {
         dialoguePanel.SetActive(false);
         audioSource.Stop(); // Stop audio when ending dialogue
         ClearOptions();
+        anim2.SetTrigger("sfade");
+        yield return new WaitForSeconds(1f);
+
+
         istalking = false;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         if (crosshair != null) crosshair.SetActive(true);
+    }
+    IEnumerator why(Vector3 t, Vector3 a, Vector3 c)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Go(t, a, c);
     }
 }
