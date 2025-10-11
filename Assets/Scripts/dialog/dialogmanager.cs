@@ -15,20 +15,25 @@ public class DialogueManager : MonoBehaviour
     private bool isdone = false;
     [Header("UI Elements")]
     public TextMeshProUGUI npcSentenceText;
-    public GameObject dialoguePanel; 
+    public GameObject dialoguePanel;
 
     [Header("Dynamic Options")]
     public GameObject optionButtonPrefab;
     public Transform optionsContainer;
     [SerializeField] private string endDialogueText = "Leave";
-    
+
     [Header("Typing Speed")]
     [Tooltip("The default speed for typing when no audio is present.")]
     [SerializeField] private float defaultTypingSpeed = 0.05f;
 
+    [Header("Environment Audio Control")]
+    public AudioSource tvAudio;
+    public AudioSource speakerAudio;
+    [Range(0f, 1f)] public float reducedVolume = 0.2f;
+
     // --- Private variables ---
     private DialogueNode currentNode;
-    private AudioSource audioSource; 
+    private AudioSource audioSource;
     private Animator anim;// NEW: To play the voice lines
     private Transform tr;
     private Vector3 from;
@@ -37,27 +42,32 @@ public class DialogueManager : MonoBehaviour
     private Transform tr2;
     private Vector3 currentcamera;
     private Animator anim2;
+    private float originalTVVolume;
+    private float originalSpeakerVolume;
     void Awake()
     {
         // NEW: Get the AudioSource component
         audioSource = GetComponent<AudioSource>();
-        
+
         dialoguePanel.SetActive(false);
-        
+
         if (optionButtonPrefab == null) Debug.LogError("Option Button Prefab not assigned!");
         if (optionsContainer == null) Debug.LogError("Options Container not assigned!");
     }
     private void Start()
     {
-        tr=FindObjectOfType<PlayerMovement>().transform;
+        tr = FindObjectOfType<PlayerMovement>().transform;
         tr2 = FindObjectOfType<MouseLook>().transform;
-        anim2=GetComponent<Animator>();
+        anim2 = GetComponent<Animator>();
+
+        if (tvAudio != null) originalTVVolume = tvAudio.volume;
+        if (speakerAudio != null) originalSpeakerVolume = speakerAudio.volume;
     }
     public void StartDialogue(DialogueNode startingNode, Animator j, Vector3 To, Vector3 angle, Vector3 CameraAngles)
     {
-        from=tr.position;
+        from = tr.position;
         istalking = true;
-        anim=j;
+        anim = j;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         if (crosshair != null) crosshair.SetActive(false);
@@ -65,7 +75,10 @@ public class DialogueManager : MonoBehaviour
         currentangle = tr.eulerAngles;
         currentcamera = tr2.eulerAngles;
         isdone = false;
-       
+
+        if (tvAudio != null) tvAudio.volume = reducedVolume;
+        if (speakerAudio != null) speakerAudio.volume = reducedVolume;
+
         StartCoroutine(why(To, angle, CameraAngles + angle));
     }
 
@@ -75,13 +88,13 @@ public class DialogueManager : MonoBehaviour
         currentNode = node;
         npcSentenceText.text = "";
         ClearOptions();
-        
+
         // NEW: Stop any previously playing audio
         audioSource.Stop();
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(node));
-        
+
     }
 
     // --- MAJOR CHANGE: This coroutine now handles audio sync ---
@@ -97,7 +110,7 @@ public class DialogueManager : MonoBehaviour
             Debug.Log(node.voiceLine.length);
             Debug.Log(node.npcSentence.Length);
             // Calculate the typing speed to match the audio length
-            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length/1.25f;
+            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length / 1.25f;
         }
         else
         {
@@ -137,7 +150,7 @@ public class DialogueManager : MonoBehaviour
         buttonText.text = $"{index + 1}. {option.optionText}";
         button.onClick.AddListener(() => ChooseOption(index));
     }
-    
+
     private void CreateEndButton()
     {
         GameObject buttonGO = Instantiate(optionButtonPrefab, optionsContainer);
@@ -177,19 +190,19 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isdone = true;
-        
-        Go(from, currentangle, currentcamera+currentangle);
+
+        Go(from, currentangle, currentcamera + currentangle);
         StartCoroutine(Fade());
-        
-        
+
+
     }
     private void Go(Vector3 final, Vector3 finalangle, Vector3 finalcamera)
     {
-        
-            tr.position = final;
-            tr.eulerAngles = finalangle;
-            tr2.eulerAngles = finalcamera;
-        
+
+        tr.position = final;
+        tr.eulerAngles = finalangle;
+        tr2.eulerAngles = finalcamera;
+
         if (istalking && !isdone)
         {
             dialoguePanel.SetActive(true);
@@ -206,6 +219,9 @@ public class DialogueManager : MonoBehaviour
 
 
         istalking = false;
+
+        if (tvAudio != null) tvAudio.volume = originalTVVolume;
+        if (speakerAudio != null) speakerAudio.volume = originalSpeakerVolume;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
