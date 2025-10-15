@@ -1,13 +1,19 @@
 using UnityEngine;
 using UnityEngine.Video;
+using System.IO; // Required for Path.Combine
 
 public class TVInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private VideoPlayer videoPlayer;// VideoPlayer component
-    [SerializeField] private Renderer tvScreenRenderer;// TV screen mesh renderer
-    [SerializeField] private Material blackMaterial;// Black material when TV is off
-    [SerializeField] private VideoClip firstVideo;// First video clip
-    [SerializeField] private VideoClip secondVideo;// Second video clip
+    [Header("Components")]
+    [SerializeField] private VideoPlayer videoPlayer; // VideoPlayer component
+    [SerializeField] private Renderer tvScreenRenderer; // TV screen mesh renderer
+
+    [Header("Materials & Videos")]
+    [SerializeField] private Material blackMaterial; // Black material when TV is off
+
+    // --- WebGL Change: Use string filenames instead of VideoClip assets ---
+    [SerializeField] private string firstVideoFileName = "MyFirstVideo.mp4";
+    [SerializeField] private string secondVideoFileName = "MySecondVideo.mp4";
 
     private Material originalMaterial;
     private enum TVState { Off, PlayingFirst, PlayingSecond }
@@ -18,6 +24,10 @@ public class TVInteractable : MonoBehaviour, IInteractable
         originalMaterial = tvScreenRenderer.material;
         tvScreenRenderer.material = blackMaterial;
 
+        // --- WebGL Change: Configure VideoPlayer for URL playback ---
+        videoPlayer.source = VideoSource.Url;
+        videoPlayer.prepareCompleted += OnVideoPrepared; // Optional: for smoother start
+
         videoPlayer.loopPointReached += OnVideoEnd;
     }
 
@@ -27,16 +37,14 @@ public class TVInteractable : MonoBehaviour, IInteractable
         {
             case TVState.Off:
                 // First interaction → play first video
-                PlayVideo(firstVideo);
+                PlayVideo(firstVideoFileName);
                 currentState = TVState.PlayingFirst;
-                NotificationManager.Instance.ShowNotification("Video 1 is Playing...");
                 break;
 
             case TVState.PlayingFirst:
                 // Interaction during first video → switch to second video
-                PlayVideo(secondVideo);
+                PlayVideo(secondVideoFileName);
                 currentState = TVState.PlayingSecond;
-                NotificationManager.Instance.ShowNotification("Video 2 is Playing...");
                 break;
 
             case TVState.PlayingSecond:
@@ -46,11 +54,24 @@ public class TVInteractable : MonoBehaviour, IInteractable
         }
     }
 
-    private void PlayVideo(VideoClip clip)
+    // --- WebGL Change: This method now accepts a filename string ---
+    private void PlayVideo(string fileName)
     {
-        videoPlayer.clip = clip;
-        videoPlayer.Play();
+        // Construct the full URL to the video in the StreamingAssets folder
+        videoPlayer.url = Path.Combine(Application.streamingAssetsPath, fileName);
+
+        // Prepare the video to pre-buffer it. Playback starts in OnVideoPrepared.
+        videoPlayer.Prepare();
+
         tvScreenRenderer.material = originalMaterial;
+        NotificationManager.Instance.ShowNotification($"Loading {fileName}...");
+    }
+
+    // This event is called when videoPlayer.Prepare() is complete
+    private void OnVideoPrepared(VideoPlayer source)
+    {
+        source.Play();
+        NotificationManager.Instance.ShowNotification($"Now Playing...");
     }
 
     private void StopTV()
@@ -66,9 +87,8 @@ public class TVInteractable : MonoBehaviour, IInteractable
         if (currentState == TVState.PlayingFirst)
         {
             // Automatic progression → play second video
-            PlayVideo(secondVideo);
+            PlayVideo(secondVideoFileName);
             currentState = TVState.PlayingSecond;
-            NotificationManager.Instance.ShowNotification("Video 2 is Playing...");
         }
         else if (currentState == TVState.PlayingSecond)
         {

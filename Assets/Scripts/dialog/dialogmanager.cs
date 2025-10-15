@@ -1,4 +1,4 @@
-// DialogueManager.cs (Updated for Synced Audio)
+// DialogueManager.cs
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject optionButtonPrefab;
     public Transform optionsContainer;
     [SerializeField] private string endDialogueText = "Leave";
+    [SerializeField] private string restartDialogueText = "Ask again";
 
     [Header("Typing Speed")]
     [Tooltip("The default speed for typing when no audio is present.")]
@@ -34,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     // --- Private variables ---
     private DialogueNode currentNode;
     private AudioSource audioSource;
-    private Animator anim;// NEW: To play the voice lines
+    private Animator anim;
     private Transform tr;
     private Vector3 from;
     private Vector3 currentangle;
@@ -44,16 +45,15 @@ public class DialogueManager : MonoBehaviour
     private Animator anim2;
     private float originalTVVolume;
     private float originalSpeakerVolume;
+
     void Awake()
     {
-        // NEW: Get the AudioSource component
         audioSource = GetComponent<AudioSource>();
-
         dialoguePanel.SetActive(false);
-
         if (optionButtonPrefab == null) Debug.LogError("Option Button Prefab not assigned!");
         if (optionsContainer == null) Debug.LogError("Options Container not assigned!");
     }
+
     private void Start()
     {
         tr = FindObjectOfType<PlayerMovement>().transform;
@@ -88,44 +88,33 @@ public class DialogueManager : MonoBehaviour
         currentNode = node;
         npcSentenceText.text = "";
         ClearOptions();
-
-        // NEW: Stop any previously playing audio
         audioSource.Stop();
-
         StopAllCoroutines();
         StartCoroutine(TypeSentence(node));
-
     }
 
-    // --- MAJOR CHANGE: This coroutine now handles audio sync ---
     IEnumerator TypeSentence(DialogueNode node)
     {
         float delayPerCharacter;
 
-        // Check if a voice line is attached and the sentence isn't empty
         if (node.voiceLine != null && node.npcSentence.Length > 0)
         {
-            // Play the audio clip
             audioSource.PlayOneShot(node.voiceLine);
             Debug.Log(node.voiceLine.length);
             Debug.Log(node.npcSentence.Length);
-            // Calculate the typing speed to match the audio length
-            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length / 1.25f;
+            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length / 1.225f;
         }
         else
         {
-            // Fallback to default speed if there's no audio
             delayPerCharacter = defaultTypingSpeed;
         }
 
-        // Type out the sentence using the calculated or default delay
         foreach (char letter in node.npcSentence.ToCharArray())
         {
             npcSentenceText.text += letter;
             yield return new WaitForSeconds(delayPerCharacter);
         }
         anim.SetBool("istalking", false);
-        // After typing/audio is complete, create the option buttons
         if (node.playerOptions.Length > 0)
         {
             for (int i = 0; i < node.playerOptions.Length; i++)
@@ -135,18 +124,15 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            CreateEndButton();
+            CreateFinalButtons();
         }
     }
-
-    // ... (The rest of the script from CreateOptionButton downwards is unchanged) ...
 
     private void CreateOptionButton(PlayerOption option, int index)
     {
         GameObject buttonGO = Instantiate(optionButtonPrefab, optionsContainer);
         TextMeshProUGUI buttonText = buttonGO.GetComponentInChildren<TextMeshProUGUI>();
         Button button = buttonGO.GetComponent<Button>();
-
         buttonText.text = $"{index + 1}. {option.optionText}";
         button.onClick.AddListener(() => ChooseOption(index));
     }
@@ -156,9 +142,34 @@ public class DialogueManager : MonoBehaviour
         GameObject buttonGO = Instantiate(optionButtonPrefab, optionsContainer);
         TextMeshProUGUI buttonText = buttonGO.GetComponentInChildren<TextMeshProUGUI>();
         Button button = buttonGO.GetComponent<Button>();
-
         buttonText.text = endDialogueText;
         button.onClick.AddListener(EndDialogue);
+    }
+
+    private void CreateFinalButtons()
+    {
+        GameObject restartButtonGO = Instantiate(optionButtonPrefab, optionsContainer);
+        TextMeshProUGUI restartButtonText = restartButtonGO.GetComponentInChildren<TextMeshProUGUI>();
+        Button restartButton = restartButtonGO.GetComponent<Button>();
+        restartButtonText.text = restartDialogueText;
+        restartButton.onClick.AddListener(RestartDialogue);
+        CreateEndButton();
+    }
+
+    private void RestartDialogue()
+    {
+        ClearOptions();
+
+        // <<< THIS IS THE ONLY ADDED LINE >>>
+        currentNode = dd; // Reset the active node to the starting node.
+
+        if (dd.playerOptions.Length > 0)
+        {
+            for (int i = 0; i < dd.playerOptions.Length; i++)
+            {
+                CreateOptionButton(dd.playerOptions[i], i);
+            }
+        }
     }
 
     private void ClearOptions()
@@ -190,15 +201,11 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isdone = true;
-
         Go(from, currentangle, currentcamera + currentangle);
         StartCoroutine(Fade());
-
-
     }
     private void Go(Vector3 final, Vector3 finalangle, Vector3 finalcamera)
     {
-
         tr.position = final;
         tr.eulerAngles = finalangle;
         tr2.eulerAngles = finalcamera;
@@ -212,14 +219,12 @@ public class DialogueManager : MonoBehaviour
     IEnumerator Fade()
     {
         dialoguePanel.SetActive(false);
-        audioSource.Stop(); // Stop audio when ending dialogue
+        audioSource.Stop();
         ClearOptions();
         anim2.SetTrigger("sfade");
         yield return new WaitForSeconds(1f);
 
-
         istalking = false;
-
         if (tvAudio != null) tvAudio.volume = originalTVVolume;
         if (speakerAudio != null) speakerAudio.volume = originalSpeakerVolume;
 
