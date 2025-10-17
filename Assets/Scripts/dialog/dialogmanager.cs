@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))] // Ensures an AudioSource is on this GameObject
 public class DialogueManager : MonoBehaviour
@@ -102,7 +104,7 @@ public class DialogueManager : MonoBehaviour
             audioSource.PlayOneShot(node.voiceLine);
             Debug.Log(node.voiceLine.length);
             Debug.Log(node.npcSentence.Length);
-            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length / 1.225f;
+            delayPerCharacter = node.voiceLine.length / node.npcSentence.Length / 1.25f;
         }
         else
         {
@@ -236,5 +238,17 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Go(t, a, c);
+    }
+    public void OnEscape(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+
+            SceneManager.LoadScene("MainMenu");
+            Debug.Log("yeah");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
     }
 }

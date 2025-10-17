@@ -9,7 +9,7 @@ public class MouseLook : MonoBehaviour
     private InputSystem_Actions controls;
     private Vector2 lookInput;
     private float xRotation = 0f;
-
+    private GameObject dm;
     private void Awake()
     {
         controls = new InputSystem_Actions();
@@ -31,11 +31,12 @@ public class MouseLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        dm=GameObject.FindWithTag("dialog"); 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
+        if (dm.GetComponent<DialogueManager>().istalking) return;
         float mouseX = lookInput.x * sensitivity * Time.fixedDeltaTime;
         float mouseY = lookInput.y * sensitivity * Time.fixedDeltaTime;
 

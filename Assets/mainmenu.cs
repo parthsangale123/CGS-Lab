@@ -24,4 +24,8 @@ public class mainmenu : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("SampleScene");
     }
+    public void QUIT()
+    {
+        Application.Quit(); 
+    }
 }

@@ -19,18 +19,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundDistance = 0.4f;
     public LayerMask groundMask;
-
+    private GameObject dm;
     void Start()
     {
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
         jumpAction = playerInput.actions.FindAction("Jump");
+        dm= GameObject.FindWithTag("dialog");
     }
 
     void Update()
     {
-        if(GameObject.FindWithTag("dialog").GetComponent<DialogueManager>().istalking) return;
+        if(dm.GetComponent<DialogueManager>().istalking) return;
         MovePlayer();
         ApplyGravityAndJump();
     }
